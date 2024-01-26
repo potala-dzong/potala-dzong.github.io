@@ -1,0 +1,430 @@
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Dzong – Getting Started</title>
+    <link>/docs/getting-started/</link>
+    <description>Recent content in Getting Started on Dzong</description>
+    <generator>Hugo -- gohugo.io</generator>
+    
+	  <atom:link href="/docs/getting-started/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+      
+        
+      
+    
+    
+    <item>
+      <title>Docs: Raspberry Pi</title>
+      <link>/docs/getting-started/rpi/</link>
+      <pubDate>Thu, 05 Jan 2017 00:00:00 +0000</pubDate>
+      
+      <guid>/docs/getting-started/rpi/</guid>
+      <description>
+        
+        
+        
+
+&lt;p&gt;Raspberry Pi is a single board computer based on Cortex-A72 (ARM v8) 64-bit
+Quad core. The latest version is Raspberry Pi 4 but the below instructions
+are based on raspberry Pi 3 Model B+.&lt;/p&gt;
+
+&lt;h2 id=&#34;prerequisites&#34;&gt;Prerequisites&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;Raspberry Pi 3 Model B+, or Pi 4 Model&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Picamera Module v2.1, Sony IMX219 8-megapixel sensor&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;[Optional] USB storage: flash drive, SSD drive, or hard drive&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&#34;installation&#34;&gt;Installation&lt;/h2&gt;
+
+&lt;p&gt;If you are not familiar with Raspberry Pi (RPi), please visit
+&lt;a href=&#34;https://projects.raspberrypi.org/en/projects/raspberry-pi-getting-started&#34; target=&#34;_blank&#34;&gt;Getting started with Raspberry Pi&lt;/a&gt;
+to get acquaintance with your small computer.&lt;/p&gt;
+
+&lt;p&gt;We have tested Potala on Raspbian OS &lt;em&gt;stretch&lt;/em&gt; and &lt;em&gt;buster&lt;/em&gt;. If your RPi has
+older version, please follow the following instructions to upgrade the OS.
+Ideally, you should erase and install a fresh OS on the micro SD card.
+However, if you are an adventurer please follow the official guidelines,
+&lt;a href=&#34;https://www.raspberrypi.org/documentation/raspbian/updating.md&#34; target=&#34;_blank&#34;&gt;Updating and upgrading Raspbian&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;To clean install the latest Raspbian OS:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;From a computer or laptop, download the Raspbian OS from
+&lt;a href=&#34;https://www.raspberrypi.org/downloads/raspbian/&#34; target=&#34;_blank&#34;&gt;Raspberry Pi download&lt;/a&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Select &amp;ldquo;&lt;a href=&#34;https://www.raspberrypi.org/downloads/raspbian/&#34; target=&#34;_blank&#34;&gt;Raspbian&lt;/a&gt;&amp;ldquo;&lt;/li&gt;
+&lt;li&gt;Choose the &amp;ldquo;desktop&amp;rdquo; version; for example, &amp;ldquo;Raspbian Buster with desktop&amp;rdquo;.
+We are using the desktop version that comes with the GUI, so to demonstrate
+the camera streaming on the monitor connected with HDMI cable.&lt;br /&gt;
+Otherwsie, Potala will work with the &amp;ldquo;Lite&amp;rdquo; version as well, for example,
+&amp;ldquo;Raspbian Buster Lite&amp;rdquo;&lt;/li&gt;
+&lt;li&gt;Click &amp;ldquo;Download ZIP&amp;rdquo;&lt;/li&gt;
+&lt;li&gt;For earlier version, Raspbian Stretch, go to &lt;a href=&#34;https://downloads.raspberrypi.org/raspbian/images/&#34; target=&#34;_blank&#34;&gt;downloads archive&lt;/a&gt;&lt;br /&gt;
+&lt;br /&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;From the computer and use the downloaded &lt;code&gt;.zip&lt;/code&gt; file, install a Raspberry Pi
+operating system image on an SD card; also described in
+&lt;a href=&#34;https://www.raspberrypi.org/documentation/installation/installing-images/README.md&#34; target=&#34;_blank&#34;&gt;Installing operating system images&lt;/a&gt;:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;check the &lt;a href=&#34;https://www.raspberrypi.org/documentation/installation/sd-cards.md&#34; target=&#34;_blank&#34;&gt;SD card requirements&lt;/a&gt;
+but if your SD card is not greater than 32GB, you should be OK to proceed&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.balena.io/etcher/&#34; target=&#34;_blank&#34;&gt;Download balenaEtcher&lt;/a&gt; and install on your
+computer; &lt;strong&gt;balenaEtcher&lt;/strong&gt; is a graphical tool to install OS to SD card
+that works on Mac OS, Linux and Windows.&lt;/li&gt;
+&lt;li&gt;Insert the SD card into the corresponding slot on your computer&lt;/li&gt;
+&lt;li&gt;Follow the
+&lt;a href=&#34;https://www.raspberrypi.org/documentation/installation/installing-images/README.md&#34; target=&#34;_blank&#34;&gt;Installing operating system images&lt;/a&gt;
+&lt;br /&gt;
+&lt;br /&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;While the SD card is being flashed, prepare your Raspberry Pi BUT don&amp;rsquo;t
+connect the power supply yet. Connect the HDMI cable to a monitor,
+mouse &amp;amp; keyboard to USB port, get the wifi SSID and password ready, and
+setup the camera. For instructions on how to setup the camera, please visit
+&lt;a href=&#34;https://projects.raspberrypi.org/en/projects/getting-started-with-picamera&#34; target=&#34;_blank&#34;&gt;Getting started with the Camera Module&lt;/a&gt;.&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;When the SD card is flashed, eject from computer &amp;amp; insert it into the
+Raspberry Pi to start first booting.&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Continue to the next step, &amp;ldquo;Setup Raspberry Pi&amp;rdquo;&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&#34;setup-raspberry-pi&#34;&gt;Setup Raspberry Pi&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;After first boot, follow the screen instructions to setup the OS; Note: please
+use the default userid, &lt;code&gt;pi&lt;/code&gt;.&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Login using the login id/password you provided during OS setup, a step above.
+The default login id: pi; and password: raspberry.&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;If any of the setup is incorrect, reconfigure using &lt;code&gt;raspi-config&lt;/code&gt; from
+terminal, setup that includes: change password, setup country, language, timezone, keyboard,
+wifi, etc.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;sudo raspi-config&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Note: to reconfigure using GUI, go to &lt;code&gt;Start - Preference - Raspberry Pi 
+Configuration&lt;/code&gt;&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Assuming you have setup the camera while waiting for the SD to be flashed,
+proceed with enabling the camera on the next step; otherwise follow the
+instructions on how to setup the camera, by visiting
+&lt;a href=&#34;https://projects.raspberrypi.org/en/projects/getting-started-with-picamera&#34; target=&#34;_blank&#34;&gt;Getting started with the Camera Module&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;If not already done, enable the camera using &lt;code&gt;&#39;raspi-config&lt;/code&gt; from the
+terminal, or from the Raspberry Pi Configuration GUI. For more detailed
+instructions, please visit
+&lt;a href=&#34;https://projects.raspberrypi.org/en/projects/getting-started-with-picamera/3&#34; target=&#34;_blank&#34;&gt;Connect the Camera Module&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;check if the camera is mounted correctly and working, by opening a terminal
+and type:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;color:#204a87&#34;&gt;cd&lt;/span&gt; ~
+raspistill -v -o test.jpg&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Refer to &lt;a href=&#34;https://www.raspberrypi.org/documentation/usage/camera/&#34; target=&#34;_blank&#34;&gt;Raspberry Camera Module&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Finally, update the raspbian OS to get the latest patches&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;sudo apt-get update
+sudo apt-get dist-upgrade&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Now your RPi host is ready for AI vision applications&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&#34;deploy-ai-application&#34;&gt;Deploy AI Application&lt;/h2&gt;
+
+&lt;p&gt;Next, let&amp;rsquo;s install and setup an AI application to demonstrate DEC Potala in
+action. Let&amp;rsquo;s go to
+&lt;a href=&#34;/docs/solutions&#34;&gt;AI Solutions&lt;/a&gt;.&lt;/p&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title>Docs: Jetson Nano</title>
+      <link>/docs/getting-started/jetson/</link>
+      <pubDate>Thu, 05 Jan 2017 00:00:00 +0000</pubDate>
+      
+      <guid>/docs/getting-started/jetson/</guid>
+      <description>
+        
+        
+        
+
+&lt;p&gt;Nvidia Jetson Nano is based on ARM Cortex A57 CPU that can run both 64bit and
+32bit ARM instructions.
+The Jetson Nano™ Developer Kit refers to both HW and SW, as discussed on
+&lt;a href=&#34;https://developer.nvidia.com/embedded/jetson-nano-developer-kit&#34; target=&#34;_blank&#34;&gt;Jetson Nano Developer Kit&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;prerequisites&#34;&gt;Prerequisites&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;Nvidia Jetson Nano&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Picamera Module v2.1, Sony IMX219 8-megapixel sensor&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;[Optional] USB storage: flash drive, SSD drive, or hard drive&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&#34;installation&#34;&gt;Installation&lt;/h2&gt;
+
+&lt;p&gt;If you are not familiar with Nvidia Jetson Nano, please visit
+&lt;a href=&#34;https://developer.nvidia.com/embedded/learn/get-started-jetson-nano-devkit#intro&#34; target=&#34;_blank&#34;&gt;Getting Started With Jetson Nano Developer Kit&lt;/a&gt;
+to get acquainted with your GPU computer. Follow the beginner instructions
+that includes: introduction, prepare for setup, write image to the microSD card,
+setup and first boot, next steps, and  troubleshooting.&lt;/p&gt;
+
+&lt;p&gt;Jetson Nano default Operating System is Ubuntu and it&amp;rsquo;s bundled in the
+&lt;a href=&#34;https://developer.nvidia.com/embedded/jetpack&#34; target=&#34;_blank&#34;&gt;Jetpack SDK&lt;/a&gt;
+that also contains developer tools, libraries and APIs, samples, and
+documentation needed to develop AI application using Nvidia CUDA.&lt;/p&gt;
+
+&lt;p&gt;[&lt;strong&gt;Recommended&lt;/strong&gt;] the instruction on the
+&lt;a href=&#34;https://developer.nvidia.com/embedded/learn/get-started-jetson-nano-devkit#write&#34; target=&#34;_blank&#34;&gt;Getting Started With Jetson Nano Developer Kit - Write Image to the microSD Card&lt;/a&gt;
+step, asks to download the SD Card image in zip file by cliking on the link
+on step &lt;em&gt;1. Download the Jetson Nano Developer Kit SD Card Image&lt;/em&gt;.
+&lt;strong&gt;NOTE:&lt;/strong&gt; the link may point to an old version file.
+As of this writing, the latest version file is &lt;code&gt;jetson-nano-sd-r32.2.1.zip&lt;/code&gt;
+which contains to Jetpack version 4.2.2, and can be downloaded from:
+&lt;a href=&#34;https://developer.nvidia.com/embedded/jetpack&#34; target=&#34;_blank&#34;&gt;https://developer.nvidia.com/embedded/jetpack&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Also note that there are two ways of &lt;code&gt;flashing&lt;/code&gt; (a.k.a, installing OS on Jetson
+Nano):&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;Recommended&lt;/strong&gt; - download the SD Card image to a computer or laptop, and
+flash the image to the SD card using, for example, Etcher. The SD Card image
+is refered by NVIDIA as JetPack SDK and the latest version as of this
+writing is version 4.2.2.
+&lt;strong&gt;NOTE&lt;/strong&gt;: using version 4.2.1 or later is important because version 4.2.1
+or later includes a beta version of NVIDIA Container Runtime with Docker
+integration for the Jetson platform.&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;The second way to setup OS on Jetson Nano is to use the NVIDIA SDK Manager;
+this method also need to be perform from a computer/laptop, but it seems
+to be more complicated and involves SDK Manager GUI. Has not been attempted.&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&#34;step-by-step-instructions&#34;&gt;Step-by-step instructions&lt;/h3&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;From a computer or laptop, if not already downloaded, go to &lt;a href=&#34;https://developer.nvidia.com/embedded/jetpack&#34; target=&#34;_blank&#34;&gt;https://developer.nvidia.com/embedded/jetpack&lt;/a&gt;
+and download the latest version of Jetpack version 4.2.2.
+As of this writing, the latest version file is &lt;code&gt;jetson-nano-sd-r32.2.1.zip&lt;/code&gt;
+which contains to Jetpack version 4.2.2. Therefore, the following
+instructions are based on version 4.2.2.&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;From the computer and use the downloaded &lt;code&gt;.zip&lt;/code&gt; file, install the
+operating system image on an SD card. The steps are exactly the same as the
+Raspberry Pi as described in
+&lt;a href=&#34;https://www.raspberrypi.org/documentation/installation/installing-images/README.md&#34; target=&#34;_blank&#34;&gt;Installing operating system images&lt;/a&gt;:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;check the &lt;a href=&#34;https://www.raspberrypi.org/documentation/installation/sd-cards.md&#34; target=&#34;_blank&#34;&gt;SD card requirements&lt;/a&gt;
+but if your SD card is not greater than 32GB, you should be OK to proceed&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.balena.io/etcher/&#34; target=&#34;_blank&#34;&gt;Download balenaEtcher&lt;/a&gt; and install on your
+computer; &lt;strong&gt;balenaEtcher&lt;/strong&gt; is a graphical tool to install OS to SD card
+that works on Mac OS, Linux and Windows.&lt;/li&gt;
+&lt;li&gt;Insert the SD card into the corresponding slot on your computer&lt;/li&gt;
+&lt;li&gt;Follow the
+&lt;a href=&#34;https://www.raspberrypi.org/documentation/installation/installing-images/README.md&#34; target=&#34;_blank&#34;&gt;Installing operating system images&lt;/a&gt;
+&lt;br /&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;While the SD card is being flashed, prepare your Jetson Nano BUT
+&lt;strong&gt;don&amp;rsquo;t connect the power supply&lt;/strong&gt; yet. Connect the HDMI cable to a monitor,
+mouse &amp;amp; keyboard to USB port, get the wifi SSID and password ready, and
+setup the camera. For instructions on how to connect the Pi-camera, please visit
+&lt;a href=&#34;https://www.jetsonhacks.com/2019/04/02/jetson-nano-raspberry-pi-camera/&#34; target=&#34;_blank&#34;&gt;Jetson Nano + Raspberry Pi Camera&lt;/a&gt;.
+USB camera will be discussed in the future.&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;When the SD card is flashed, eject from computer &amp;amp; insert it into the
+Jetson Nano to start first booting. In case you can&amp;rsquo;t find where the micro
+SD card port is, go to &lt;a href=&#34;https://developer.nvidia.com/embedded/learn/get-started-jetson-nano-devkit#setup&#34; target=&#34;_blank&#34;&gt;Getting Started With Jetson Nano Developer Kit - Setup and First Boot&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Continue to the next step, &amp;ldquo;Setup Jetson Nano&amp;rdquo;&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&#34;setup-jetson-nano&#34;&gt;Setup Jetson Nano&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;After first boot, follow the screen instructions to setup the OS&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Login using the login id/password you provided during OS setup, a step above.
+&lt;strong&gt;It&amp;rsquo;s important to use the login id, &lt;code&gt;pi&lt;/code&gt;,&lt;/strong&gt; for the preconfigured scripts
+to work later.&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Check kernel version for your own info&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;uname -a 
+Linux pi-desktop 4.9.140-tegra #1 SMP PREEMPT Wed Mar 13 00:32:22 PDT 2019 aarch64 aarch64 aarch64 GNU/Linux
+&lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Jetpack 4.2.2 and newer comes preinstalled with NVIDIA Container Runtime;
+&lt;strong&gt;NVIDIA Container Runtime&lt;/strong&gt; is a GPU aware container runtime, compatible with
+the Open Containers Initiative (OCI) specification used by Docker, CRI-O, and
+other popular container technologies. It simplifies the process of building
+and deploying containerized GPU-accelerated applications. NVIDIA Container
+Runtime supports container technologies like Docker so developers can wrap
+their GPU-accelerated applications along with its dependencies into a single
+package that is guaranteed to deliver the best performance on NVIDIA GPUs,
+regardless of the deployment environment. It includes a container runtime
+library and utilities to automatically configure containers to leverage NVIDIA GPUs.&lt;/p&gt;
+
+&lt;p&gt;Ref: &lt;a href=&#34;https://github.com/nvidia/nvidia-docker/wiki/nvidia-container-runtime-on-jetson&#34; target=&#34;_blank&#34;&gt;https://github.com/nvidia/nvidia-docker/wiki/nvidia-container-runtime-on-jetson&lt;/a&gt;&lt;/p&gt;
+
+
+
+
+
+
+
+
+&lt;div class=&#34;card rounded p-2 td-post-card mb-4 mt-4&#34; style=&#34;max-width: 810px&#34;&gt;
+	&lt;img class=&#34;card-img-top&#34; src=&#34;/docs/getting-started/jetson/nvidia_container_runtime_hu2a0e80038d40c76eff35fcb581d3acc7_476795_800x0_resize_catmullrom_2.png&#34; width=&#34;800&#34; height=&#34;487&#34;&gt;
+	
+	&lt;div class=&#34;card-body px-0 pt-2 pb-0&#34;&gt;
+		&lt;p class=&#34;card-text&#34;&gt;
+    Nvidia Container Runtime
+    &lt;small class=&#34;text-muted&#34;&gt;&lt;br/&gt;Source: Nvidia&lt;/small&gt;&lt;/p&gt;
+	&lt;/div&gt;
+	
+&lt;/div&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Check the NVIDIA Container Runtime packages were installed by running:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;sudo dpkg --get-selections | grep nvidia
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Output:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;libnvidia-container-tools			install
+libnvidia-container0:arm64			install
+nvidia-container-runtime			install
+nvidia-container-toolkit			install
+nvidia-docker2					install
+nvidia-l4t-3d-core				install
+nvidia-l4t-apt-source				install
+nvidia-l4t-bootloader				install
+nvidia-l4t-camera				install
+nvidia-l4t-ccp-t210ref				install
+nvidia-l4t-configs				install
+nvidia-l4t-core					install
+nvidia-l4t-cuda					install
+nvidia-l4t-firmware				install
+nvidia-l4t-graphics-demos			install
+nvidia-l4t-gstreamer				install
+nvidia-l4t-init					install
+nvidia-l4t-kernel				install
+nvidia-l4t-kernel-dtbs				install
+nvidia-l4t-kernel-headers			install
+nvidia-l4t-multimedia				install
+nvidia-l4t-multimedia-utils			install
+nvidia-l4t-oem-config				install
+nvidia-l4t-tools				install
+nvidia-l4t-wayland				install
+nvidia-l4t-weston				install
+nvidia-l4t-x11					install
+nvidia-l4t-xusb-firmware			install
+&lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Check the NVIDIA Container Runtime is installed &amp;amp; running:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;sudo docker info | grep nvidia
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Output:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;Runtimes: nvidia runc
+&lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;Upgrade Docker runtime&lt;/strong&gt; - JetPack 4.2.2 also comes with &lt;strong&gt;docker runtime&lt;/strong&gt;
+v18.09.7; However, NVIDIA Container Toolkit needs docker runtime v19.03 or
+higher, that supports NVIDIA GPUs natively as devices in the Docker runtime.
+So usage of nvidia-docker2 packages is no longer need and can be deprecated,
+as discussed in &lt;a href=&#34;https://github.com/NVIDIA/nvidia-docker#quick-start&#34; target=&#34;_blank&#34;&gt;https://github.com/NVIDIA/nvidia-docker#quick-start&lt;/a&gt;.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;docker --version
+Docker version 18.09.7, build 2d0083d
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Follow official docker instructions at
+&lt;a href=&#34;https://docs.docker.com/install/linux/docker-ce/ubuntu/&#34; target=&#34;_blank&#34;&gt;https://docs.docker.com/install/linux/docker-ce/ubuntu/&lt;/a&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;Uninstall docker&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;sudo apt-get remove docker docker-engine docker.io containerd runc
+&lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Install using convenient script&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;sudo apt-get update
+sudo apt-get install -y curl
+curl -fsSL https://get.docker.com -o get-docker.sh
+sudo sh get-docker.sh
+&lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;to use Docker as a non-root user, adding the user to the “docker” group:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;sudo usermod -aG docker &amp;lt;userID&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;strong&gt;Need to reboot for the command to be active&lt;/strong&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;After reboot, check version is correct&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;docker --version
+Docker version 19.03.2, build 6a30dfc
+&lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Assuming you have connect the Pi-camera to MIPI-CSI while waiting for the SD
+to be flashed above, check if the camera is mounted correctly and working,
+by opening a terminal and execute the following to make sure the file exists:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;ls /dev/video0&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Note: the Jetson board supported both MIPI-CSI &amp;amp; USB cameras.
+The MIPI-CSI, (Mobile Industry Processor Interface - Camera Serial Interface),
+is for high speed transmission between cameras and host devices, straight to
+the processor, unlike USB stack with a lot of overhead.
+For more detailed information, see &lt;a href=&#34;https://www.jetsonhacks.com/2019/04/02/jetson-nano-raspberry-pi-camera/&#34; target=&#34;_blank&#34;&gt;Jetson Nano + Raspberry Pi Camera&lt;/a&gt;.
+The Pi-camera is connected to CSI interface. The USB camera will be
+discussed in the future.&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;Check camera streaming&lt;/strong&gt; -
+Note that decode, vic and display functionality can be accessed from
+software using the associated gstreamer plugins available as part of the
+GStreamer version 1.0 based accelerated solution in L4T.
+See &lt;a href=&#34;https://github.com/JetsonHacksNano/CSI-Camera&#34; target=&#34;_blank&#34;&gt;Github&lt;/a&gt; for how to
+configure &lt;code&gt;gst-launch-1.0&lt;/code&gt;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;gst-launch-1.0 nvarguscamerasrc \
+! &#39;video/x-raw(memory:NVMM),width=3820, height=2464, framerate=21/1, format=NV12&#39; \
+! nvvidconv flip-method=2 \
+! &#39;video/x-raw,width=960, height=616&#39; \
+! nvvidconv ! nvegltransform ! nveglglessink -e
+&lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Finally, update the Jetson Nano to get the latest OS patches&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;sudo apt-get update
+sudo apt-get dist-upgrade&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Now your Jetson Nano host is ready for AI applications&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&#34;deploy-ai-application&#34;&gt;Deploy AI Application&lt;/h2&gt;
+
+&lt;p&gt;Next, let&amp;rsquo;s install and setup an AI application to demonstrate DEC Potala in
+action. Let&amp;rsquo;s go to
+&lt;a href=&#34;/docs/solutions&#34;&gt;AI Solutions&lt;/a&gt;.&lt;/p&gt;
+
+      </description>
+    </item>
+    
+  </channel>
+</rss>

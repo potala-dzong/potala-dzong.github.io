@@ -1,0 +1,210 @@
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Dzong – AI Solutions</title>
+    <link>/docs/solutions/</link>
+    <description>Recent content in AI Solutions on Dzong</description>
+    <generator>Hugo -- gohugo.io</generator>
+    
+	  <atom:link href="/docs/solutions/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+      
+        
+      
+    
+    
+    <item>
+      <title>Docs: Home Monitoring System - HOMS</title>
+      <link>/docs/solutions/home_monitor/</link>
+      <pubDate>Thu, 05 Jan 2017 00:00:00 +0000</pubDate>
+      
+      <guid>/docs/solutions/home_monitor/</guid>
+      <description>
+        
+        
+        
+
+
+
+&lt;div class=&#34;pageinfo pageinfo-primary&#34;&gt;
+&lt;p&gt;Potala Home Monitoring system, HOMS, is a home monitoring system with AI-based
+object recognition.&lt;/p&gt;
+
+&lt;/div&gt;
+
+
+&lt;p&gt;Potala Home Monitoring system can be configured to capture image frame based
+on two different modes: &lt;em&gt;manual&lt;/em&gt;, or &lt;em&gt;motion triggerred&lt;/em&gt;. Captured images are
+processed in offline batch mode for recognizing object(s) in the picture.
+There is an additional mode that capture images, also based on motion triggered,
+and process object recognition inline albeit it is slower.&lt;/p&gt;
+
+
+
+
+
+
+
+
+&lt;div class=&#34;card rounded p-2 td-post-card mb-4 mt-4&#34; style=&#34;max-width: 660px&#34;&gt;
+	&lt;img class=&#34;card-img-top&#34; src=&#34;/docs/solutions/home_monitor/brickwall-camera-dirty-354062_hu3d03a01dcc18bc5be0e67db3d8d209a6_1889291_650x500_fill_q75_catmullrom_smart1.jpg&#34; width=&#34;650&#34; height=&#34;500&#34;&gt;
+	
+	&lt;div class=&#34;card-body px-0 pt-2 pb-0&#34;&gt;
+		&lt;p class=&#34;card-text&#34;&gt;
+Outdoor Cameras.
+&lt;small class=&#34;text-muted&#34;&gt;&lt;br/&gt;Photo: pexels.com&lt;/small&gt;&lt;/p&gt;
+	&lt;/div&gt;
+	
+&lt;/div&gt;
+
+&lt;h2 id=&#34;prerequisites&#34;&gt;Prerequisites&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;Raspberry Pi 3 Model B+, or Pi 4 Model&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Picamera Module v2.1, Sony IMX219 8-megapixel sensor&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;[Optional] USB storage: flash drive, SSD drive, or hard drive&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&#34;functional-overview&#34;&gt;Functional Overview&lt;/h2&gt;
+
+&lt;p&gt;The high level functional setup of the home monitoring system is illustrated
+below.&lt;/p&gt;
+
+
+
+
+
+
+
+
+&lt;div class=&#34;card rounded p-2 td-post-card mb-4 mt-4&#34; style=&#34;max-width: 710px&#34;&gt;
+	&lt;img class=&#34;card-img-top&#34; src=&#34;/docs/solutions/home_monitor/setup_hu2ba9748012900b69f3b5671e9e30f31c_687406_700x620_resize_catmullrom_2.png&#34; width=&#34;700&#34; height=&#34;620&#34;&gt;
+	
+	&lt;div class=&#34;card-body px-0 pt-2 pb-0&#34;&gt;
+		&lt;p class=&#34;card-text&#34;&gt;
+Functional Setup
+&lt;small class=&#34;text-muted&#34;&gt;&lt;br/&gt;Photo: Dzong&lt;/small&gt;&lt;/p&gt;
+	&lt;/div&gt;
+	
+&lt;/div&gt;
+
+&lt;p&gt;The hardware components consists of: Raspberry Pi, and the Pi camera.
+It&amp;rsquo;s assumed that the RPi is connected to a monitor, keyboard and mouse,
+at least during initial setup; they can be removed after completion of the
+setup. Future access to RPi can be done using SSH for terminal access, and
+VNC for GUI access. Both of these services need to be enabled because they
+are not enabled by default. Please refer to
+&lt;a href=&#34;https://www.raspberrypi.org/documentation/remote-access/ssh/&#34; target=&#34;_blank&#34;&gt;Remote Access - SSH&lt;/a&gt;
+and &lt;a href=&#34;https://www.raspberrypi.org/documentation/remote-access/vnc/&#34; target=&#34;_blank&#34;&gt;Remote Access - VNC&lt;/a&gt;
+for how to enable these services.&lt;/p&gt;
+
+&lt;p&gt;The software components (services) consists of:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;Image web portal to view and review captured images&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Camera monitoring services&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&#34;hardware-setup&#34;&gt;Hardware Setup&lt;/h2&gt;
+
+&lt;p&gt;It&amp;rsquo;s amazing what a low-cost single board computer like Raspberry Pi can do.
+This is based on the Pi 3 Model B+. The Pi 4 and future models will get even
+better.&lt;/p&gt;
+
+
+
+
+
+
+
+
+&lt;div class=&#34;card rounded p-2 td-post-card mb-4 mt-4&#34; style=&#34;max-width: 760px&#34;&gt;
+	&lt;img class=&#34;card-img-top&#34; src=&#34;/docs/solutions/home_monitor/7_inch_screen_standback_hu980510680f5d5ec9769ffd133d7e376f_1289236_750x0_resize_q75_catmullrom.jpg&#34; width=&#34;750&#34; height=&#34;461&#34;&gt;
+	
+	&lt;div class=&#34;card-body px-0 pt-2 pb-0&#34;&gt;
+		&lt;p class=&#34;card-text&#34;&gt;
+Raspberry Pi 3 Model B+ mounted on the back of 7-inch capacitive touch screen.
+&lt;small class=&#34;text-muted&#34;&gt;&lt;br/&gt;Photo: Dzong&lt;/small&gt;&lt;/p&gt;
+	&lt;/div&gt;
+	
+&lt;/div&gt;
+
+
+
+
+
+
+
+
+&lt;div class=&#34;card rounded p-2 td-post-card mb-4 mt-4&#34; style=&#34;max-width: 760px&#34;&gt;
+	&lt;img class=&#34;card-img-top&#34; src=&#34;/docs/solutions/home_monitor/potala_hw_setup_rpi_hu72aad811573c503abe5f770182cc9736_865852_750x0_resize_q75_catmullrom.jpg&#34; width=&#34;750&#34; height=&#34;788&#34;&gt;
+	
+	&lt;div class=&#34;card-body px-0 pt-2 pb-0&#34;&gt;
+		&lt;p class=&#34;card-text&#34;&gt;
+Complete setup of Raspberry Pi with Pi-camera
+&lt;small class=&#34;text-muted&#34;&gt;&lt;br/&gt;Photo: Dzong&lt;/small&gt;&lt;/p&gt;
+	&lt;/div&gt;
+	
+&lt;/div&gt;
+
+&lt;p&gt;A similar setup running Nvidia Jetson Nano connected to Dell P2210
+(22-inch wide screen) running Potala applications using the GPU.
+
+
+
+
+
+
+
+&lt;div class=&#34;card rounded p-2 td-post-card mb-4 mt-4&#34; style=&#34;max-width: 760px&#34;&gt;
+	&lt;img class=&#34;card-img-top&#34; src=&#34;/docs/solutions/home_monitor/potala_hw_setup_jetson_hu809abf1fcd93b606598b0b834685a2e6_3239009_750x0_resize_q75_catmullrom.jpg&#34; width=&#34;750&#34; height=&#34;1000&#34;&gt;
+	
+	&lt;div class=&#34;card-body px-0 pt-2 pb-0&#34;&gt;
+		&lt;p class=&#34;card-text&#34;&gt;
+Complete setup Nvidia Jetson Nano with Pi-camera
+&lt;small class=&#34;text-muted&#34;&gt;&lt;br/&gt;Photo: Dzong&lt;/small&gt;&lt;/p&gt;
+	&lt;/div&gt;
+	
+&lt;/div&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;software-installation-and-setup&#34;&gt;Software Installation and Setup&lt;/h2&gt;
+
+&lt;p&gt;The installation and setup can be found at:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;&lt;a href=&#34;https://gitlab.com/potala/sln-home-monitor-rpi/blob/v0.2.0/README.md&#34; target=&#34;_blank&#34;&gt;Potala Home Monitoring System for Raspberry Pi @Github&lt;/a&gt;.&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;a href=&#34;https://gitlab.com/potala/sln-home-monitor-jetson/blob/v0.1.0/README.md&#34; target=&#34;_blank&#34;&gt;Potala Home Monitoring System for Jetson Nano @Github&lt;/a&gt;.&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&#34;deployed-home&#34;&gt;Deployed @Home&lt;/h2&gt;
+
+&lt;p&gt;Depending where you place the camera or the type of camera used, the results
+can be pretty impressive.&lt;/p&gt;
+
+
+
+
+
+
+
+
+&lt;div class=&#34;card rounded p-2 td-post-card mb-4 mt-4&#34; style=&#34;max-width: 2010px&#34;&gt;
+	&lt;img class=&#34;card-img-top&#34; src=&#34;/docs/solutions/home_monitor/potala_img_portal_hu707f64b027a4eec9c753ea4efeba9eea_2742522_2000x1600_fit_catmullrom_2.PNG&#34; width=&#34;2000&#34; height=&#34;1486&#34;&gt;
+	
+	&lt;div class=&#34;card-body px-0 pt-2 pb-0&#34;&gt;
+		&lt;p class=&#34;card-text&#34;&gt;
+Web-based Image Portal
+&lt;small class=&#34;text-muted&#34;&gt;&lt;br/&gt;Photo: Dzong&lt;/small&gt;&lt;/p&gt;
+	&lt;/div&gt;
+	
+&lt;/div&gt;
+
+      </description>
+    </item>
+    
+  </channel>
+</rss>

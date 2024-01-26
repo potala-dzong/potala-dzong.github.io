@@ -1,0 +1,53 @@
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Dzong – News About Dzong Edge Platform</title>
+    <link>/blog/news/</link>
+    <description>Recent content in News About Dzong Edge Platform on Dzong</description>
+    <generator>Hugo -- gohugo.io</generator>
+    
+	  <atom:link href="/blog/news/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+      
+        
+      
+    
+    
+    <item>
+      <title>Blog: Simplify AI @ Edge</title>
+      <link>/blog/2019/09/19/simplify-ai-edge/</link>
+      <pubDate>Thu, 19 Sep 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/blog/2019/09/19/simplify-ai-edge/</guid>
+      <description>
+        
+        
+        
+        <![CDATA[<img src="/blog/2019/09/19/simplify-ai-edge/featured-potala02-get_huf27f8c2ed49f9ace01c76621a7babd29_2268697_640x0_resize_catmullrom_2.PNG" width="640" height="364"/>]]>
+        
+        &lt;p&gt;The &lt;strong&gt;Dzong Potala&lt;/strong&gt; is a nano Edge platform for smaller SBC hardware such as
+Raspberry Pi or Jetson.&lt;/p&gt;
+
+
+
+
+
+
+
+
+&lt;div class=&#34;card rounded p-2 td-post-card mb-4 mt-4&#34; style=&#34;max-width: 610px&#34;&gt;
+	&lt;img class=&#34;card-img-top&#34; src=&#34;/blog/2019/09/19/simplify-ai-edge/featured-potala02-get_huf27f8c2ed49f9ace01c76621a7babd29_2268697_600x300_fill_catmullrom_smart1_2.PNG&#34; width=&#34;600&#34; height=&#34;300&#34;&gt;
+	
+	&lt;div class=&#34;card-body px-0 pt-2 pb-0&#34;&gt;
+		&lt;p class=&#34;card-text&#34;&gt;
+Potala Dzong
+&lt;small class=&#34;text-muted&#34;&gt;&lt;br/&gt;Photo: wikipedia&lt;/small&gt;&lt;/p&gt;
+	&lt;/div&gt;
+	
+&lt;/div&gt;
+
+      </description>
+    </item>
+    
+  </channel>
+</rss>

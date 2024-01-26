@@ -1,0 +1,30 @@
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Dzong – New Releases</title>
+    <link>/blog/releases/</link>
+    <description>Recent content in New Releases on Dzong</description>
+    <generator>Hugo -- gohugo.io</generator>
+    
+	  <atom:link href="/blog/releases/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+      
+        
+      
+    
+    
+    <item>
+      <title>Blog: Potala Nano Edge Platform - Release soon!</title>
+      <link>/blog/2019/09/25/potala-nano-edge-platform-release-soon/</link>
+      <pubDate>Wed, 25 Sep 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/blog/2019/09/25/potala-nano-edge-platform-release-soon/</guid>
+      <description>
+        
+        
+        
+      </description>
+    </item>
+    
+  </channel>
+</rss>

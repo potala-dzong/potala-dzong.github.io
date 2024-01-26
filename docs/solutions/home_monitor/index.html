@@ -1,0 +1,639 @@
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="generator" content="Hugo 0.58.3" />
+
+<META NAME="ROBOTS" CONTENT="NOINDEX, NOFOLLOW">
+
+
+
+<link rel="shortcut icon" href="/favicons/favicon.ico" >
+<link rel="apple-touch-icon" href="/favicons/apple-touch-icon-180x180.png" sizes="180x180">
+<link rel="icon" type="image/png" href="/favicons/favicon-16x16.png" sizes="16x16">
+<link rel="icon" type="image/png" href="/favicons/favicon-32x32.png" sizes="32x32">
+<link rel="icon" type="image/png" href="/favicons/android-36x36.png" sizes="36x36">
+<link rel="icon" type="image/png" href="/favicons/android-48x48.png" sizes="48x48">
+<link rel="icon" type="image/png" href="/favicons/android-72x72.png" sizes="72x72">
+<link rel="icon" type="image/png" href="/favicons/android-96x196.png" sizes="96x196">
+<link rel="icon" type="image/png" href="/favicons/android-144x144.png" sizes="144x144">
+<link rel="icon" type="image/png" href="/favicons/android-192x192.png"sizes="192x192">
+
+<title>Home Monitoring System - HOMS | Dzong</title><meta property="og:title" content="Home Monitoring System - HOMS" />
+<meta property="og:description" content="Test drive Potala Home Monitoring System
+" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="/docs/solutions/home_monitor/" />
+<meta property="article:published_time" content="2017-01-05T00:00:00+00:00" />
+<meta property="article:modified_time" content="2019-10-11T23:31:34-07:00" /><meta property="og:site_name" content="Dzong" />
+<meta itemprop="name" content="Home Monitoring System - HOMS">
+<meta itemprop="description" content="Test drive Potala Home Monitoring System
+">
+
+
+<meta itemprop="datePublished" content="2017-01-05T00:00:00&#43;00:00" />
+<meta itemprop="dateModified" content="2019-10-11T23:31:34-07:00" />
+<meta itemprop="wordCount" content="367">
+
+
+
+<meta itemprop="keywords" content="" />
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Home Monitoring System - HOMS"/>
+<meta name="twitter:description" content="Test drive Potala Home Monitoring System
+"/>
+
+
+
+
+
+<link rel="preload" href="/scss/main.min.9aeffc9e83359f1f6c567fea8e2076603d4e37a6b64417981024b11fe9769455.css" as="style">
+<link href="/scss/main.min.9aeffc9e83359f1f6c567fea8e2076603d4e37a6b64417981024b11fe9769455.css" rel="stylesheet" integrity="">
+
+<script
+  src="https://code.jquery.com/jquery-3.3.1.min.js"
+  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+  crossorigin="anonymous"></script>
+
+
+    <title>Home Monitoring System - HOMS | Dzong</title>
+  </head>
+  <body class="td-page">
+    <header>
+      
+<nav class="js-navbar-scroll navbar navbar-expand navbar-dark flex-column flex-md-row td-navbar">
+        <a class="navbar-brand" href="/">
+		<span class="navbar-logo"></span><span class="text-uppercase font-weight-bold">Dzong</span>
+	</a>
+	<div class="td-navbar-nav-scroll ml-md-auto" id="main_navbar">
+		<ul class="navbar-nav mt-2 mt-lg-0">
+			
+			
+			<li class="nav-item mr-4 mb-2 mb-lg-0">
+				
+				
+				
+				
+				
+				
+				<a class="nav-link" href="/about/" ><span>About</span></a>
+			</li>
+			
+			<li class="nav-item mr-4 mb-2 mb-lg-0">
+				
+				
+				
+				
+				
+				
+				<a class="nav-link active" href="/docs/" ><span class="active">Documentation</span></a>
+			</li>
+			
+			<li class="nav-item mr-4 mb-2 mb-lg-0">
+				
+				
+				
+				
+				
+				
+				<a class="nav-link" href="/blog/" ><span>Blog</span></a>
+			</li>
+			
+			
+			
+		</ul>
+	</div>
+	<div class="navbar-nav d-none d-lg-block"></div>
+</nav>
+
+    </header>
+    <div class="container-fluid td-outer">
+      <div class="td-main">
+        <div class="row flex-xl-nowrap">
+          <div class="col-12 col-md-3 col-xl-2 td-sidebar d-print-none">
+            
+
+
+
+
+<div id="td-sidebar-menu" class="td-sidebar__inner">
+  
+  <form class="td-sidebar__search d-flex align-items-center">
+    
+    <button class="btn btn-link td-sidebar__toggle d-md-none p-0 ml-3 fas fa-bars" type="button" data-toggle="collapse" data-target="#td-section-nav" aria-controls="td-docs-nav" aria-expanded="false" aria-label="Toggle section navigation">
+    </button>
+  </form>
+  
+  <nav class="collapse td-sidebar-nav pt-2 pl-4" id="td-section-nav">
+    
+    
+
+
+
+
+
+
+<ul class="td-sidebar-nav__section pr-md-3">
+  <li class="td-sidebar-nav__section-title">
+    <a  href="/docs/" class="align-left pl-0 pr-2 td-sidebar-link td-sidebar-link__section">Documentation</a>
+  </li>
+  <ul>
+    <li class="collapse show" id="docs">
+      
+      
+      
+      
+      
+
+
+
+
+
+
+<ul class="td-sidebar-nav__section pr-md-3">
+  <li class="td-sidebar-nav__section-title">
+    <a  href="/docs/overview/" class="align-left pl-0 pr-2 collapsed td-sidebar-link td-sidebar-link__section">Overview</a>
+  </li>
+  <ul>
+    <li class="collapse " id="docs-overview">
+      
+      
+      
+    </li>
+  </ul>
+</ul>
+
+      
+      
+      
+      
+
+
+
+
+
+
+<ul class="td-sidebar-nav__section pr-md-3">
+  <li class="td-sidebar-nav__section-title">
+    <a  href="/docs/getting-started/" class="align-left pl-0 pr-2 collapsed td-sidebar-link td-sidebar-link__section">Getting Started</a>
+  </li>
+  <ul>
+    <li class="collapse " id="docs-getting-started">
+      
+      
+      
+      
+      
+      
+      <a class="td-sidebar-link td-sidebar-link__page " id="m-docs-getting-started-rpi" href="/docs/getting-started/rpi/">Raspberry Pi</a>
+      
+      
+      
+      
+      
+      <a class="td-sidebar-link td-sidebar-link__page " id="m-docs-getting-started-jetson" href="/docs/getting-started/jetson/">Jetson Nano</a>
+      
+      
+    </li>
+  </ul>
+</ul>
+
+      
+      
+      
+      
+
+
+
+
+
+
+<ul class="td-sidebar-nav__section pr-md-3">
+  <li class="td-sidebar-nav__section-title">
+    <a  href="/docs/solutions/" class="align-left pl-0 pr-2 active td-sidebar-link td-sidebar-link__section">AI Solutions</a>
+  </li>
+  <ul>
+    <li class="collapse show" id="docs-solutions">
+      
+      
+      
+      
+      
+      
+      <a class="td-sidebar-link td-sidebar-link__page  active" id="m-docs-solutions-home-monitor" href="/docs/solutions/home_monitor/">Home Monitoring System - HOMS</a>
+      
+      
+    </li>
+  </ul>
+</ul>
+
+      
+      
+    </li>
+  </ul>
+</ul>
+
+  </nav>
+</div>
+
+
+
+
+          </div>
+          <div class="d-none d-xl-block col-xl-2 td-toc d-print-none">
+            
+
+
+
+
+<div class="td-page-meta ml-2 pb-1 pt-2 mb-0">
+
+
+
+
+
+
+
+<a href="https://github.com/rdzong/rdzong.github.io/issues/new?title=Home%20Monitoring%20System%20-%20HOMS" target="_blank"><i class="fab fa-github fa-fw"></i> Create documentation issue</a>
+
+
+<a href="https://github.com/rdzong/feedbacks/issues/new" target="_blank"><i class="fas fa-tasks fa-fw"></i> Create project issue</a>
+
+</div>
+
+
+
+
+
+
+<nav id="TableOfContents">
+<ul>
+<li>
+<ul>
+<li><a href="#prerequisites">Prerequisites</a></li>
+<li><a href="#functional-overview">Functional Overview</a></li>
+<li><a href="#hardware-setup">Hardware Setup</a></li>
+<li><a href="#software-installation-and-setup">Software Installation and Setup</a></li>
+<li><a href="#deployed-home">Deployed @Home</a></li>
+</ul></li>
+</ul>
+</nav>
+
+
+
+          </div>
+          <main class="col-12 col-md-9 col-xl-8 pl-md-5" role="main">
+            <nav aria-label="breadcrumb" class="d-none d-md-block d-print-none">
+	<ol class="breadcrumb spb-1">
+		
+
+
+
+
+
+
+
+
+
+
+<li class="breadcrumb-item" >
+	<a href="/docs/">Documentation</a>
+</li>
+
+
+
+
+<li class="breadcrumb-item" >
+	<a href="/docs/solutions/">AI Solutions</a>
+</li>
+
+
+
+
+<li class="breadcrumb-item active" aria-current="page">
+	<a href="/docs/solutions/home_monitor/">Home Monitoring System - HOMS</a>
+</li>
+
+	</ol>
+</nav	>
+
+            
+<div class="td-content">
+	<h1>Home Monitoring System - HOMS</h1>
+	<div class="lead">Test drive Potala Home Monitoring System</div>
+	
+
+
+
+<div class="pageinfo pageinfo-primary">
+<p>Potala Home Monitoring system, HOMS, is a home monitoring system with AI-based
+object recognition.</p>
+
+</div>
+
+
+<p>Potala Home Monitoring system can be configured to capture image frame based
+on two different modes: <em>manual</em>, or <em>motion triggerred</em>. Captured images are
+processed in offline batch mode for recognizing object(s) in the picture.
+There is an additional mode that capture images, also based on motion triggered,
+and process object recognition inline albeit it is slower.</p>
+
+
+
+
+
+
+
+
+<div class="card rounded p-2 td-post-card mb-4 mt-4" style="max-width: 660px">
+	<img class="card-img-top" src="/docs/solutions/home_monitor/brickwall-camera-dirty-354062_hu3d03a01dcc18bc5be0e67db3d8d209a6_1889291_650x500_fill_q75_catmullrom_smart1.jpg" width="650" height="500">
+	
+	<div class="card-body px-0 pt-2 pb-0">
+		<p class="card-text">
+Outdoor Cameras.
+<small class="text-muted"><br/>Photo: pexels.com</small></p>
+	</div>
+	
+</div>
+
+<h2 id="prerequisites">Prerequisites</h2>
+
+<ul>
+<li><p>Raspberry Pi 3 Model B+, or Pi 4 Model</p></li>
+
+<li><p>Picamera Module v2.1, Sony IMX219 8-megapixel sensor</p></li>
+
+<li><p>[Optional] USB storage: flash drive, SSD drive, or hard drive</p></li>
+</ul>
+
+<h2 id="functional-overview">Functional Overview</h2>
+
+<p>The high level functional setup of the home monitoring system is illustrated
+below.</p>
+
+
+
+
+
+
+
+
+<div class="card rounded p-2 td-post-card mb-4 mt-4" style="max-width: 710px">
+	<img class="card-img-top" src="/docs/solutions/home_monitor/setup_hu2ba9748012900b69f3b5671e9e30f31c_687406_700x620_resize_catmullrom_2.png" width="700" height="620">
+	
+	<div class="card-body px-0 pt-2 pb-0">
+		<p class="card-text">
+Functional Setup
+<small class="text-muted"><br/>Photo: Dzong</small></p>
+	</div>
+	
+</div>
+
+<p>The hardware components consists of: Raspberry Pi, and the Pi camera.
+It&rsquo;s assumed that the RPi is connected to a monitor, keyboard and mouse,
+at least during initial setup; they can be removed after completion of the
+setup. Future access to RPi can be done using SSH for terminal access, and
+VNC for GUI access. Both of these services need to be enabled because they
+are not enabled by default. Please refer to
+<a href="https://www.raspberrypi.org/documentation/remote-access/ssh/" target="_blank">Remote Access - SSH</a>
+and <a href="https://www.raspberrypi.org/documentation/remote-access/vnc/" target="_blank">Remote Access - VNC</a>
+for how to enable these services.</p>
+
+<p>The software components (services) consists of:</p>
+
+<ul>
+<li><p>Image web portal to view and review captured images</p></li>
+
+<li><p>Camera monitoring services</p></li>
+</ul>
+
+<h2 id="hardware-setup">Hardware Setup</h2>
+
+<p>It&rsquo;s amazing what a low-cost single board computer like Raspberry Pi can do.
+This is based on the Pi 3 Model B+. The Pi 4 and future models will get even
+better.</p>
+
+
+
+
+
+
+
+
+<div class="card rounded p-2 td-post-card mb-4 mt-4" style="max-width: 760px">
+	<img class="card-img-top" src="/docs/solutions/home_monitor/7_inch_screen_standback_hu980510680f5d5ec9769ffd133d7e376f_1289236_750x0_resize_q75_catmullrom.jpg" width="750" height="461">
+	
+	<div class="card-body px-0 pt-2 pb-0">
+		<p class="card-text">
+Raspberry Pi 3 Model B+ mounted on the back of 7-inch capacitive touch screen.
+<small class="text-muted"><br/>Photo: Dzong</small></p>
+	</div>
+	
+</div>
+
+
+
+
+
+
+
+
+<div class="card rounded p-2 td-post-card mb-4 mt-4" style="max-width: 760px">
+	<img class="card-img-top" src="/docs/solutions/home_monitor/potala_hw_setup_rpi_hu72aad811573c503abe5f770182cc9736_865852_750x0_resize_q75_catmullrom.jpg" width="750" height="788">
+	
+	<div class="card-body px-0 pt-2 pb-0">
+		<p class="card-text">
+Complete setup of Raspberry Pi with Pi-camera
+<small class="text-muted"><br/>Photo: Dzong</small></p>
+	</div>
+	
+</div>
+
+<p>A similar setup running Nvidia Jetson Nano connected to Dell P2210
+(22-inch wide screen) running Potala applications using the GPU.
+
+
+
+
+
+
+
+<div class="card rounded p-2 td-post-card mb-4 mt-4" style="max-width: 760px">
+	<img class="card-img-top" src="/docs/solutions/home_monitor/potala_hw_setup_jetson_hu809abf1fcd93b606598b0b834685a2e6_3239009_750x0_resize_q75_catmullrom.jpg" width="750" height="1000">
+	
+	<div class="card-body px-0 pt-2 pb-0">
+		<p class="card-text">
+Complete setup Nvidia Jetson Nano with Pi-camera
+<small class="text-muted"><br/>Photo: Dzong</small></p>
+	</div>
+	
+</div></p>
+
+<h2 id="software-installation-and-setup">Software Installation and Setup</h2>
+
+<p>The installation and setup can be found at:</p>
+
+<ul>
+<li><p><a href="https://gitlab.com/potala/sln-home-monitor-rpi/blob/v0.2.0/README.md" target="_blank">Potala Home Monitoring System for Raspberry Pi @Github</a>.</p></li>
+
+<li><p><a href="https://gitlab.com/potala/sln-home-monitor-jetson/blob/v0.1.0/README.md" target="_blank">Potala Home Monitoring System for Jetson Nano @Github</a>.</p></li>
+</ul>
+
+<h2 id="deployed-home">Deployed @Home</h2>
+
+<p>Depending where you place the camera or the type of camera used, the results
+can be pretty impressive.</p>
+
+
+
+
+
+
+
+
+<div class="card rounded p-2 td-post-card mb-4 mt-4" style="max-width: 2010px">
+	<img class="card-img-top" src="/docs/solutions/home_monitor/potala_img_portal_hu707f64b027a4eec9c753ea4efeba9eea_2742522_2000x1600_fit_catmullrom_2.PNG" width="2000" height="1486">
+	
+	<div class="card-body px-0 pt-2 pb-0">
+		<p class="card-text">
+Web-based Image Portal
+<small class="text-muted"><br/>Photo: Dzong</small></p>
+	</div>
+	
+</div>
+
+	
+		<style>
+  .feedback--answer {
+    display: inline-block;
+  }
+  .feedback--answer-no {
+    margin-left: 1em;
+  }
+  .feedback--response {
+    display: none;
+    margin-top: 1em;
+  }
+  .feedback--response__visible {
+    display: block;
+  }
+</style>
+<h2 class="feedback--title">Feedback</h2>
+<p class="feedback--question">Was this page helpful?</p>
+<button class="feedback--answer feedback--answer-yes">Yes</button>
+<button class="feedback--answer feedback--answer-no">No</button>
+<p class="feedback--response feedback--response-yes">
+  Glad to hear it! Please <a href="https://github.com/USERNAME/REPOSITORY/issues/new">tell us how we can improve</a>.
+</p>
+<p class="feedback--response feedback--response-no">
+  Sorry to hear that. Please <a href="https://github.com/USERNAME/REPOSITORY/issues/new">tell us how we can improve</a>.
+</p>
+<script>
+  const yesButton = document.querySelector('.feedback--answer-yes');
+  const noButton = document.querySelector('.feedback--answer-no');
+  const yesResponse = document.querySelector('.feedback--response-yes');
+  const noResponse = document.querySelector('.feedback--response-no');
+  const disableButtons = () => {
+    yesButton.disabled = true;
+    noButton.disabled = true;
+  };
+  const sendFeedback = (value) => {
+    if (typeof ga !== 'function') return;
+    const args = {
+      command: 'send',
+      hitType: 'event',
+      category: 'Helpful',
+      action: 'click',
+      label: window.location.pathname,
+      value: value
+    };
+    ga(args.command, args.hitType, args.category, args.action, args.label, args.value);
+  };
+  yesButton.addEventListener('click', () => {
+    yesResponse.classList.add('feedback--response__visible');
+    disableButtons();
+    sendFeedback(1);
+  });
+  noButton.addEventListener('click', () => {
+    noResponse.classList.add('feedback--response__visible');
+    disableButtons();
+    sendFeedback(0);
+  });
+</script>
+
+		<br />
+	
+	
+	<div class="text-muted mt-5 pt-3 border-top">Last modified October 11, 2019: <a  href="https://github.com/rdzong/rdzong.github.io/commit/615b1451071c9f57c106366581dd06fd9fbf92cc">revised the link to point to v0.2.0 (615b145)</a>
+</div>
+</div>
+
+
+          </main>
+        </div>
+      </div>
+      
+<footer class="bg-dark py-5 row d-print-none">
+  <div class="container-fluid mx-sm-5">
+    <div class="row">
+      <div class="col-6 col-sm-4 text-xs-center order-sm-2">
+        
+        
+        
+<ul class="list-inline mb-0">
+  
+  <li class="list-inline-item mx-2 h3" data-toggle="tooltip" data-placement="top" title="User mailing list" aria-label="User mailing list">
+    <a class="text-white" target="_blank" href="">
+      <i class="fa fa-envelope"></i>
+    </a>
+  </li>
+  
+</ul>
+
+        
+        
+      </div>
+      <div class="col-6 col-sm-4 text-right text-xs-center order-sm-3">
+        
+        
+        
+<ul class="list-inline mb-0">
+  
+  <li class="list-inline-item mx-2 h3" data-toggle="tooltip" data-placement="top" title="GitHub" aria-label="GitHub">
+    <a class="text-white" target="_blank" href="https://github.com/rdzong">
+      <i class="fab fa-github"></i>
+    </a>
+  </li>
+  
+</ul>
+
+        
+        
+      </div>
+      <div class="col-12 col-sm-4 text-center py-2 order-sm-2">
+        <small class="text-white">&copy; 2020 Dzong, Inc. All Rights Reserved</small>
+        
+	
+      </div>
+    </div>
+  </div>
+</footer>
+
+
+    </div>
+    
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+
+
+
+
+
+
+<script src="/js/main.min.29b0315468c00226fa6f4556a9cebc0ac4fe1ce1457a01b22c0a06b329877383.js" integrity="sha256-KbAxVGjAAib6b0VWqc68CsT&#43;HOFFegGyLAoGsymHc4M=" crossorigin="anonymous"></script>
+
+
+
+  </body>
+</html>

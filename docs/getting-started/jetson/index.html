@@ -1,0 +1,729 @@
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="generator" content="Hugo 0.58.3" />
+
+<META NAME="ROBOTS" CONTENT="NOINDEX, NOFOLLOW">
+
+
+
+<link rel="shortcut icon" href="/favicons/favicon.ico" >
+<link rel="apple-touch-icon" href="/favicons/apple-touch-icon-180x180.png" sizes="180x180">
+<link rel="icon" type="image/png" href="/favicons/favicon-16x16.png" sizes="16x16">
+<link rel="icon" type="image/png" href="/favicons/favicon-32x32.png" sizes="32x32">
+<link rel="icon" type="image/png" href="/favicons/android-36x36.png" sizes="36x36">
+<link rel="icon" type="image/png" href="/favicons/android-48x48.png" sizes="48x48">
+<link rel="icon" type="image/png" href="/favicons/android-72x72.png" sizes="72x72">
+<link rel="icon" type="image/png" href="/favicons/android-96x196.png" sizes="96x196">
+<link rel="icon" type="image/png" href="/favicons/android-144x144.png" sizes="144x144">
+<link rel="icon" type="image/png" href="/favicons/android-192x192.png"sizes="192x192">
+
+<title>Jetson Nano | Dzong</title><meta property="og:title" content="Jetson Nano" />
+<meta property="og:description" content="Running DEC Potala on Jetson Nano
+" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="/docs/getting-started/jetson/" />
+<meta property="article:published_time" content="2017-01-05T00:00:00+00:00" />
+<meta property="article:modified_time" content="2019-10-06T15:48:51-07:00" /><meta property="og:site_name" content="Dzong" />
+<meta itemprop="name" content="Jetson Nano">
+<meta itemprop="description" content="Running DEC Potala on Jetson Nano
+">
+
+
+<meta itemprop="datePublished" content="2017-01-05T00:00:00&#43;00:00" />
+<meta itemprop="dateModified" content="2019-10-06T15:48:51-07:00" />
+<meta itemprop="wordCount" content="1245">
+
+
+
+<meta itemprop="keywords" content="" />
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Jetson Nano"/>
+<meta name="twitter:description" content="Running DEC Potala on Jetson Nano
+"/>
+
+
+
+
+
+<link rel="preload" href="/scss/main.min.9aeffc9e83359f1f6c567fea8e2076603d4e37a6b64417981024b11fe9769455.css" as="style">
+<link href="/scss/main.min.9aeffc9e83359f1f6c567fea8e2076603d4e37a6b64417981024b11fe9769455.css" rel="stylesheet" integrity="">
+
+<script
+  src="https://code.jquery.com/jquery-3.3.1.min.js"
+  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+  crossorigin="anonymous"></script>
+
+
+    <title>Jetson Nano | Dzong</title>
+  </head>
+  <body class="td-page">
+    <header>
+      
+<nav class="js-navbar-scroll navbar navbar-expand navbar-dark flex-column flex-md-row td-navbar">
+        <a class="navbar-brand" href="/">
+		<span class="navbar-logo"></span><span class="text-uppercase font-weight-bold">Dzong</span>
+	</a>
+	<div class="td-navbar-nav-scroll ml-md-auto" id="main_navbar">
+		<ul class="navbar-nav mt-2 mt-lg-0">
+			
+			
+			<li class="nav-item mr-4 mb-2 mb-lg-0">
+				
+				
+				
+				
+				
+				
+				<a class="nav-link" href="/about/" ><span>About</span></a>
+			</li>
+			
+			<li class="nav-item mr-4 mb-2 mb-lg-0">
+				
+				
+				
+				
+				
+				
+				<a class="nav-link active" href="/docs/" ><span class="active">Documentation</span></a>
+			</li>
+			
+			<li class="nav-item mr-4 mb-2 mb-lg-0">
+				
+				
+				
+				
+				
+				
+				<a class="nav-link" href="/blog/" ><span>Blog</span></a>
+			</li>
+			
+			
+			
+		</ul>
+	</div>
+	<div class="navbar-nav d-none d-lg-block"></div>
+</nav>
+
+    </header>
+    <div class="container-fluid td-outer">
+      <div class="td-main">
+        <div class="row flex-xl-nowrap">
+          <div class="col-12 col-md-3 col-xl-2 td-sidebar d-print-none">
+            
+
+
+
+
+<div id="td-sidebar-menu" class="td-sidebar__inner">
+  
+  <form class="td-sidebar__search d-flex align-items-center">
+    
+    <button class="btn btn-link td-sidebar__toggle d-md-none p-0 ml-3 fas fa-bars" type="button" data-toggle="collapse" data-target="#td-section-nav" aria-controls="td-docs-nav" aria-expanded="false" aria-label="Toggle section navigation">
+    </button>
+  </form>
+  
+  <nav class="collapse td-sidebar-nav pt-2 pl-4" id="td-section-nav">
+    
+    
+
+
+
+
+
+
+<ul class="td-sidebar-nav__section pr-md-3">
+  <li class="td-sidebar-nav__section-title">
+    <a  href="/docs/" class="align-left pl-0 pr-2 td-sidebar-link td-sidebar-link__section">Documentation</a>
+  </li>
+  <ul>
+    <li class="collapse show" id="docs">
+      
+      
+      
+      
+      
+
+
+
+
+
+
+<ul class="td-sidebar-nav__section pr-md-3">
+  <li class="td-sidebar-nav__section-title">
+    <a  href="/docs/overview/" class="align-left pl-0 pr-2 collapsed td-sidebar-link td-sidebar-link__section">Overview</a>
+  </li>
+  <ul>
+    <li class="collapse " id="docs-overview">
+      
+      
+      
+    </li>
+  </ul>
+</ul>
+
+      
+      
+      
+      
+
+
+
+
+
+
+<ul class="td-sidebar-nav__section pr-md-3">
+  <li class="td-sidebar-nav__section-title">
+    <a  href="/docs/getting-started/" class="align-left pl-0 pr-2 active td-sidebar-link td-sidebar-link__section">Getting Started</a>
+  </li>
+  <ul>
+    <li class="collapse show" id="docs-getting-started">
+      
+      
+      
+      
+      
+      
+      <a class="td-sidebar-link td-sidebar-link__page " id="m-docs-getting-started-rpi" href="/docs/getting-started/rpi/">Raspberry Pi</a>
+      
+      
+      
+      
+      
+      <a class="td-sidebar-link td-sidebar-link__page  active" id="m-docs-getting-started-jetson" href="/docs/getting-started/jetson/">Jetson Nano</a>
+      
+      
+    </li>
+  </ul>
+</ul>
+
+      
+      
+      
+      
+
+
+
+
+
+
+<ul class="td-sidebar-nav__section pr-md-3">
+  <li class="td-sidebar-nav__section-title">
+    <a  href="/docs/solutions/" class="align-left pl-0 pr-2 collapsed td-sidebar-link td-sidebar-link__section">AI Solutions</a>
+  </li>
+  <ul>
+    <li class="collapse " id="docs-solutions">
+      
+      
+      
+      
+      
+      
+      <a class="td-sidebar-link td-sidebar-link__page " id="m-docs-solutions-home-monitor" href="/docs/solutions/home_monitor/">Home Monitoring System - HOMS</a>
+      
+      
+    </li>
+  </ul>
+</ul>
+
+      
+      
+    </li>
+  </ul>
+</ul>
+
+  </nav>
+</div>
+
+
+
+
+          </div>
+          <div class="d-none d-xl-block col-xl-2 td-toc d-print-none">
+            
+
+
+
+
+<div class="td-page-meta ml-2 pb-1 pt-2 mb-0">
+
+
+
+
+
+
+
+<a href="https://github.com/rdzong/rdzong.github.io/issues/new?title=Jetson%20Nano" target="_blank"><i class="fab fa-github fa-fw"></i> Create documentation issue</a>
+
+
+<a href="https://github.com/rdzong/feedbacks/issues/new" target="_blank"><i class="fas fa-tasks fa-fw"></i> Create project issue</a>
+
+</div>
+
+
+
+
+
+
+<nav id="TableOfContents">
+<ul>
+<li>
+<ul>
+<li><a href="#prerequisites">Prerequisites</a></li>
+<li><a href="#installation">Installation</a>
+<ul>
+<li><a href="#step-by-step-instructions">Step-by-step instructions</a></li>
+</ul></li>
+<li><a href="#setup-jetson-nano">Setup Jetson Nano</a></li>
+<li><a href="#deploy-ai-application">Deploy AI Application</a></li>
+</ul></li>
+</ul>
+</nav>
+
+
+
+          </div>
+          <main class="col-12 col-md-9 col-xl-8 pl-md-5" role="main">
+            <nav aria-label="breadcrumb" class="d-none d-md-block d-print-none">
+	<ol class="breadcrumb spb-1">
+		
+
+
+
+
+
+
+
+
+
+
+<li class="breadcrumb-item" >
+	<a href="/docs/">Documentation</a>
+</li>
+
+
+
+
+<li class="breadcrumb-item" >
+	<a href="/docs/getting-started/">Getting Started</a>
+</li>
+
+
+
+
+<li class="breadcrumb-item active" aria-current="page">
+	<a href="/docs/getting-started/jetson/">Jetson Nano</a>
+</li>
+
+	</ol>
+</nav	>
+
+            
+<div class="td-content">
+	<h1>Jetson Nano</h1>
+	<div class="lead">Running DEC Potala on Jetson Nano</div>
+	
+
+<p>Nvidia Jetson Nano is based on ARM Cortex A57 CPU that can run both 64bit and
+32bit ARM instructions.
+The Jetson Nano™ Developer Kit refers to both HW and SW, as discussed on
+<a href="https://developer.nvidia.com/embedded/jetson-nano-developer-kit" target="_blank">Jetson Nano Developer Kit</a></p>
+
+<h2 id="prerequisites">Prerequisites</h2>
+
+<ul>
+<li><p>Nvidia Jetson Nano</p></li>
+
+<li><p>Picamera Module v2.1, Sony IMX219 8-megapixel sensor</p></li>
+
+<li><p>[Optional] USB storage: flash drive, SSD drive, or hard drive</p></li>
+</ul>
+
+<h2 id="installation">Installation</h2>
+
+<p>If you are not familiar with Nvidia Jetson Nano, please visit
+<a href="https://developer.nvidia.com/embedded/learn/get-started-jetson-nano-devkit#intro" target="_blank">Getting Started With Jetson Nano Developer Kit</a>
+to get acquainted with your GPU computer. Follow the beginner instructions
+that includes: introduction, prepare for setup, write image to the microSD card,
+setup and first boot, next steps, and  troubleshooting.</p>
+
+<p>Jetson Nano default Operating System is Ubuntu and it&rsquo;s bundled in the
+<a href="https://developer.nvidia.com/embedded/jetpack" target="_blank">Jetpack SDK</a>
+that also contains developer tools, libraries and APIs, samples, and
+documentation needed to develop AI application using Nvidia CUDA.</p>
+
+<p>[<strong>Recommended</strong>] the instruction on the
+<a href="https://developer.nvidia.com/embedded/learn/get-started-jetson-nano-devkit#write" target="_blank">Getting Started With Jetson Nano Developer Kit - Write Image to the microSD Card</a>
+step, asks to download the SD Card image in zip file by cliking on the link
+on step <em>1. Download the Jetson Nano Developer Kit SD Card Image</em>.
+<strong>NOTE:</strong> the link may point to an old version file.
+As of this writing, the latest version file is <code>jetson-nano-sd-r32.2.1.zip</code>
+which contains to Jetpack version 4.2.2, and can be downloaded from:
+<a href="https://developer.nvidia.com/embedded/jetpack" target="_blank">https://developer.nvidia.com/embedded/jetpack</a></p>
+
+<p>Also note that there are two ways of <code>flashing</code> (a.k.a, installing OS on Jetson
+Nano):</p>
+
+<ul>
+<li><p><strong>Recommended</strong> - download the SD Card image to a computer or laptop, and
+flash the image to the SD card using, for example, Etcher. The SD Card image
+is refered by NVIDIA as JetPack SDK and the latest version as of this
+writing is version 4.2.2.
+<strong>NOTE</strong>: using version 4.2.1 or later is important because version 4.2.1
+or later includes a beta version of NVIDIA Container Runtime with Docker
+integration for the Jetson platform.</p></li>
+
+<li><p>The second way to setup OS on Jetson Nano is to use the NVIDIA SDK Manager;
+this method also need to be perform from a computer/laptop, but it seems
+to be more complicated and involves SDK Manager GUI. Has not been attempted.</p></li>
+</ul>
+
+<h3 id="step-by-step-instructions">Step-by-step instructions</h3>
+
+<ul>
+<li><p>From a computer or laptop, if not already downloaded, go to <a href="https://developer.nvidia.com/embedded/jetpack" target="_blank">https://developer.nvidia.com/embedded/jetpack</a>
+and download the latest version of Jetpack version 4.2.2.
+As of this writing, the latest version file is <code>jetson-nano-sd-r32.2.1.zip</code>
+which contains to Jetpack version 4.2.2. Therefore, the following
+instructions are based on version 4.2.2.</p></li>
+
+<li><p>From the computer and use the downloaded <code>.zip</code> file, install the
+operating system image on an SD card. The steps are exactly the same as the
+Raspberry Pi as described in
+<a href="https://www.raspberrypi.org/documentation/installation/installing-images/README.md" target="_blank">Installing operating system images</a>:</p>
+
+<ul>
+<li>check the <a href="https://www.raspberrypi.org/documentation/installation/sd-cards.md" target="_blank">SD card requirements</a>
+but if your SD card is not greater than 32GB, you should be OK to proceed</li>
+<li><a href="https://www.balena.io/etcher/" target="_blank">Download balenaEtcher</a> and install on your
+computer; <strong>balenaEtcher</strong> is a graphical tool to install OS to SD card
+that works on Mac OS, Linux and Windows.</li>
+<li>Insert the SD card into the corresponding slot on your computer</li>
+<li>Follow the
+<a href="https://www.raspberrypi.org/documentation/installation/installing-images/README.md" target="_blank">Installing operating system images</a>
+<br /></li>
+</ul></li>
+
+<li><p>While the SD card is being flashed, prepare your Jetson Nano BUT
+<strong>don&rsquo;t connect the power supply</strong> yet. Connect the HDMI cable to a monitor,
+mouse &amp; keyboard to USB port, get the wifi SSID and password ready, and
+setup the camera. For instructions on how to connect the Pi-camera, please visit
+<a href="https://www.jetsonhacks.com/2019/04/02/jetson-nano-raspberry-pi-camera/" target="_blank">Jetson Nano + Raspberry Pi Camera</a>.
+USB camera will be discussed in the future.</p></li>
+
+<li><p>When the SD card is flashed, eject from computer &amp; insert it into the
+Jetson Nano to start first booting. In case you can&rsquo;t find where the micro
+SD card port is, go to <a href="https://developer.nvidia.com/embedded/learn/get-started-jetson-nano-devkit#setup" target="_blank">Getting Started With Jetson Nano Developer Kit - Setup and First Boot</a></p></li>
+
+<li><p>Continue to the next step, &ldquo;Setup Jetson Nano&rdquo;</p></li>
+</ul>
+
+<h2 id="setup-jetson-nano">Setup Jetson Nano</h2>
+
+<ul>
+<li><p>After first boot, follow the screen instructions to setup the OS</p></li>
+
+<li><p>Login using the login id/password you provided during OS setup, a step above.
+<strong>It&rsquo;s important to use the login id, <code>pi</code>,</strong> for the preconfigured scripts
+to work later.</p></li>
+
+<li><p>Check kernel version for your own info</p>
+
+<pre><code>uname -a 
+Linux pi-desktop 4.9.140-tegra #1 SMP PREEMPT Wed Mar 13 00:32:22 PDT 2019 aarch64 aarch64 aarch64 GNU/Linux
+</code></pre></li>
+
+<li><p>Jetpack 4.2.2 and newer comes preinstalled with NVIDIA Container Runtime;
+<strong>NVIDIA Container Runtime</strong> is a GPU aware container runtime, compatible with
+the Open Containers Initiative (OCI) specification used by Docker, CRI-O, and
+other popular container technologies. It simplifies the process of building
+and deploying containerized GPU-accelerated applications. NVIDIA Container
+Runtime supports container technologies like Docker so developers can wrap
+their GPU-accelerated applications along with its dependencies into a single
+package that is guaranteed to deliver the best performance on NVIDIA GPUs,
+regardless of the deployment environment. It includes a container runtime
+library and utilities to automatically configure containers to leverage NVIDIA GPUs.</p>
+
+<p>Ref: <a href="https://github.com/nvidia/nvidia-docker/wiki/nvidia-container-runtime-on-jetson" target="_blank">https://github.com/nvidia/nvidia-docker/wiki/nvidia-container-runtime-on-jetson</a></p>
+
+
+
+
+
+
+
+
+<div class="card rounded p-2 td-post-card mb-4 mt-4" style="max-width: 810px">
+	<img class="card-img-top" src="/docs/getting-started/jetson/nvidia_container_runtime_hu2a0e80038d40c76eff35fcb581d3acc7_476795_800x0_resize_catmullrom_2.png" width="800" height="487">
+	
+	<div class="card-body px-0 pt-2 pb-0">
+		<p class="card-text">
+    Nvidia Container Runtime
+    <small class="text-muted"><br/>Source: Nvidia</small></p>
+	</div>
+	
+</div></li>
+
+<li><p>Check the NVIDIA Container Runtime packages were installed by running:</p>
+
+<pre><code>sudo dpkg --get-selections | grep nvidia
+</code></pre>
+
+<p>Output:</p>
+
+<pre><code>libnvidia-container-tools			install
+libnvidia-container0:arm64			install
+nvidia-container-runtime			install
+nvidia-container-toolkit			install
+nvidia-docker2					install
+nvidia-l4t-3d-core				install
+nvidia-l4t-apt-source				install
+nvidia-l4t-bootloader				install
+nvidia-l4t-camera				install
+nvidia-l4t-ccp-t210ref				install
+nvidia-l4t-configs				install
+nvidia-l4t-core					install
+nvidia-l4t-cuda					install
+nvidia-l4t-firmware				install
+nvidia-l4t-graphics-demos			install
+nvidia-l4t-gstreamer				install
+nvidia-l4t-init					install
+nvidia-l4t-kernel				install
+nvidia-l4t-kernel-dtbs				install
+nvidia-l4t-kernel-headers			install
+nvidia-l4t-multimedia				install
+nvidia-l4t-multimedia-utils			install
+nvidia-l4t-oem-config				install
+nvidia-l4t-tools				install
+nvidia-l4t-wayland				install
+nvidia-l4t-weston				install
+nvidia-l4t-x11					install
+nvidia-l4t-xusb-firmware			install
+</code></pre></li>
+
+<li><p>Check the NVIDIA Container Runtime is installed &amp; running:</p>
+
+<pre><code>sudo docker info | grep nvidia
+</code></pre>
+
+<p>Output:</p>
+
+<pre><code>Runtimes: nvidia runc
+</code></pre></li>
+
+<li><p><strong>Upgrade Docker runtime</strong> - JetPack 4.2.2 also comes with <strong>docker runtime</strong>
+v18.09.7; However, NVIDIA Container Toolkit needs docker runtime v19.03 or
+higher, that supports NVIDIA GPUs natively as devices in the Docker runtime.
+So usage of nvidia-docker2 packages is no longer need and can be deprecated,
+as discussed in <a href="https://github.com/NVIDIA/nvidia-docker#quick-start" target="_blank">https://github.com/NVIDIA/nvidia-docker#quick-start</a>.</p>
+
+<pre><code>docker --version
+Docker version 18.09.7, build 2d0083d
+</code></pre>
+
+<p>Follow official docker instructions at
+<a href="https://docs.docker.com/install/linux/docker-ce/ubuntu/" target="_blank">https://docs.docker.com/install/linux/docker-ce/ubuntu/</a></p>
+
+<ul>
+<li><p>Uninstall docker</p>
+
+<pre><code>sudo apt-get remove docker docker-engine docker.io containerd runc
+</code></pre></li>
+
+<li><p>Install using convenient script</p>
+
+<pre><code>sudo apt-get update
+sudo apt-get install -y curl
+curl -fsSL https://get.docker.com -o get-docker.sh
+sudo sh get-docker.sh
+</code></pre></li>
+
+<li><p>to use Docker as a non-root user, adding the user to the “docker” group:</p>
+
+<pre><code>sudo usermod -aG docker &lt;userID&gt;
+</code></pre>
+
+<p><strong>Need to reboot for the command to be active</strong></p></li>
+</ul></li>
+
+<li><p>After reboot, check version is correct</p>
+
+<pre><code>docker --version
+Docker version 19.03.2, build 6a30dfc
+</code></pre></li>
+
+<li><p>Assuming you have connect the Pi-camera to MIPI-CSI while waiting for the SD
+to be flashed above, check if the camera is mounted correctly and working,
+by opening a terminal and execute the following to make sure the file exists:</p>
+<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">ls /dev/video0</code></pre></div>
+<p>Note: the Jetson board supported both MIPI-CSI &amp; USB cameras.
+The MIPI-CSI, (Mobile Industry Processor Interface - Camera Serial Interface),
+is for high speed transmission between cameras and host devices, straight to
+the processor, unlike USB stack with a lot of overhead.
+For more detailed information, see <a href="https://www.jetsonhacks.com/2019/04/02/jetson-nano-raspberry-pi-camera/" target="_blank">Jetson Nano + Raspberry Pi Camera</a>.
+The Pi-camera is connected to CSI interface. The USB camera will be
+discussed in the future.</p></li>
+
+<li><p><strong>Check camera streaming</strong> -
+Note that decode, vic and display functionality can be accessed from
+software using the associated gstreamer plugins available as part of the
+GStreamer version 1.0 based accelerated solution in L4T.
+See <a href="https://github.com/JetsonHacksNano/CSI-Camera" target="_blank">Github</a> for how to
+configure <code>gst-launch-1.0</code></p>
+
+<pre><code>gst-launch-1.0 nvarguscamerasrc \
+! 'video/x-raw(memory:NVMM),width=3820, height=2464, framerate=21/1, format=NV12' \
+! nvvidconv flip-method=2 \
+! 'video/x-raw,width=960, height=616' \
+! nvvidconv ! nvegltransform ! nveglglessink -e
+</code></pre></li>
+
+<li><p>Finally, update the Jetson Nano to get the latest OS patches</p>
+<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">sudo apt-get update
+sudo apt-get dist-upgrade</code></pre></div></li>
+
+<li><p>Now your Jetson Nano host is ready for AI applications</p></li>
+</ul>
+
+<h2 id="deploy-ai-application">Deploy AI Application</h2>
+
+<p>Next, let&rsquo;s install and setup an AI application to demonstrate DEC Potala in
+action. Let&rsquo;s go to
+<a href="/docs/solutions">AI Solutions</a>.</p>
+
+	
+		<style>
+  .feedback--answer {
+    display: inline-block;
+  }
+  .feedback--answer-no {
+    margin-left: 1em;
+  }
+  .feedback--response {
+    display: none;
+    margin-top: 1em;
+  }
+  .feedback--response__visible {
+    display: block;
+  }
+</style>
+<h2 class="feedback--title">Feedback</h2>
+<p class="feedback--question">Was this page helpful?</p>
+<button class="feedback--answer feedback--answer-yes">Yes</button>
+<button class="feedback--answer feedback--answer-no">No</button>
+<p class="feedback--response feedback--response-yes">
+  Glad to hear it! Please <a href="https://github.com/USERNAME/REPOSITORY/issues/new">tell us how we can improve</a>.
+</p>
+<p class="feedback--response feedback--response-no">
+  Sorry to hear that. Please <a href="https://github.com/USERNAME/REPOSITORY/issues/new">tell us how we can improve</a>.
+</p>
+<script>
+  const yesButton = document.querySelector('.feedback--answer-yes');
+  const noButton = document.querySelector('.feedback--answer-no');
+  const yesResponse = document.querySelector('.feedback--response-yes');
+  const noResponse = document.querySelector('.feedback--response-no');
+  const disableButtons = () => {
+    yesButton.disabled = true;
+    noButton.disabled = true;
+  };
+  const sendFeedback = (value) => {
+    if (typeof ga !== 'function') return;
+    const args = {
+      command: 'send',
+      hitType: 'event',
+      category: 'Helpful',
+      action: 'click',
+      label: window.location.pathname,
+      value: value
+    };
+    ga(args.command, args.hitType, args.category, args.action, args.label, args.value);
+  };
+  yesButton.addEventListener('click', () => {
+    yesResponse.classList.add('feedback--response__visible');
+    disableButtons();
+    sendFeedback(1);
+  });
+  noButton.addEventListener('click', () => {
+    noResponse.classList.add('feedback--response__visible');
+    disableButtons();
+    sendFeedback(0);
+  });
+</script>
+
+		<br />
+	
+	
+	<div class="text-muted mt-5 pt-3 border-top">Last modified October 6, 2019: <a  href="https://github.com/rdzong/rdzong.github.io/commit/67588e221129abb9f704ba7921aeb64a37f30409">refined content for accuracy and brevity. (67588e2)</a>
+</div>
+</div>
+
+
+          </main>
+        </div>
+      </div>
+      
+<footer class="bg-dark py-5 row d-print-none">
+  <div class="container-fluid mx-sm-5">
+    <div class="row">
+      <div class="col-6 col-sm-4 text-xs-center order-sm-2">
+        
+        
+        
+<ul class="list-inline mb-0">
+  
+  <li class="list-inline-item mx-2 h3" data-toggle="tooltip" data-placement="top" title="User mailing list" aria-label="User mailing list">
+    <a class="text-white" target="_blank" href="">
+      <i class="fa fa-envelope"></i>
+    </a>
+  </li>
+  
+</ul>
+
+        
+        
+      </div>
+      <div class="col-6 col-sm-4 text-right text-xs-center order-sm-3">
+        
+        
+        
+<ul class="list-inline mb-0">
+  
+  <li class="list-inline-item mx-2 h3" data-toggle="tooltip" data-placement="top" title="GitHub" aria-label="GitHub">
+    <a class="text-white" target="_blank" href="https://github.com/rdzong">
+      <i class="fab fa-github"></i>
+    </a>
+  </li>
+  
+</ul>
+
+        
+        
+      </div>
+      <div class="col-12 col-sm-4 text-center py-2 order-sm-2">
+        <small class="text-white">&copy; 2020 Dzong, Inc. All Rights Reserved</small>
+        
+	
+      </div>
+    </div>
+  </div>
+</footer>
+
+
+    </div>
+    
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+
+
+
+
+
+
+<script src="/js/main.min.29b0315468c00226fa6f4556a9cebc0ac4fe1ce1457a01b22c0a06b329877383.js" integrity="sha256-KbAxVGjAAib6b0VWqc68CsT&#43;HOFFegGyLAoGsymHc4M=" crossorigin="anonymous"></script>
+
+
+
+  </body>
+</html>
